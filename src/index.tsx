@@ -12,7 +12,9 @@ import Bullet, {
 	BulletStyle,
 } from "./components/bullet/bullet";
 
-const StyledSliderArrows = styled.div`
+const StyledSliderArrows = styled.div.attrs(props => ({
+	className: props.className,
+}))`
 	top: 50%;
 	position: absolute;
 	width: 100%;
@@ -21,7 +23,9 @@ const StyledSliderArrows = styled.div`
 	justify-content: space-between;
 `;
 
-const StyledBulletList = styled.ul`
+const StyledBulletList = styled.ul.attrs(props => ({
+	className: props.className,
+}))`
 	display: flex;
 	justify-content: center;
 	list-style-type: none;
@@ -29,26 +33,34 @@ const StyledBulletList = styled.ul`
 	margin: 15px 0;
 `;
 
-const StyledBullets = styled.div`
+const StyledBullets = styled.div.attrs(props => ({
+	className: props.className,
+}))`
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 	z-index: 1;
 `;
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.div.attrs(props => ({
+	className: props.className,
+}))`
 	width: 100%;
 	height: 100%;
 `;
 
-const StyledSlider = styled.div`
+const StyledSlider = styled.div.attrs(props => ({
+	className: props.className,
+}))`
 	position: relative;
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
 `;
 
-const StyledSlide = styled.div`
+const StyledSlide = styled.div.attrs(props => ({
+	className: props.className,
+}))`
 	width: 100%;
 	height: 100%;
 	will-change: transform;
